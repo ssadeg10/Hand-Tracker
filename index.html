@@ -3,22 +3,18 @@
         <meta charset= "UTF-8" />
         <meta name="viewport" content ="width=device-width, intital-scale=1.0" />
         <meta ghttp-equiv="X-UA-Compatible" content = "ie=edge" />
-        <title>Documents</title>
-        <style type = "text/css">
-        
-            .circle
-            {
-                width: 20px;
-                height: 20px;
-                border: 10px solid #000;
-                position: absolute;
-                border-radius: 15px;
-            }
-            </style>
+        <title>Hand Tracker</title>
+        <link rel="stylesheet" href="style.css" type="text/css"></link>
         </head>
         <body>
             <video id="video" hidden = true></video>
             <canvas id="canvas"></canvas>
+            <div id="alignEl">
+                <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+                </label>
+            </div>
             
             <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"> </script>
             <script src = "app.js"></script>
