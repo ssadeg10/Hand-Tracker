@@ -26,14 +26,12 @@ let model;
 function runDetection(){
     model.detect(video)
         .then(predictions => {
-            // console.log(predictions);
-            // console.log(model.getModelParameters());
             if (predictions[0]) {
-                let x = predictions[0].bbox[0] + (predictions[0].bbox[2] / 2);
-                let y = predictions[0].bbox[1] + (predictions[0].bbox[3] / 2);
-
-                console.log(x,y);
-                animateCircles(x, y);
+                    for(var i = 0; i<predictions.length; i++){
+                    let x = predictions[i].bbox[0] + (predictions[0].bbox[2] / 2);
+                    let y = predictions[i].bbox[1] + (predictions[0].bbox[3] / 2);
+                    animateCircles(x, y);
+                }
             }
             model.renderPredictions(predictions, canvas, context, video,);
         });
@@ -45,9 +43,6 @@ handTrack.load(modelParams).then(lmodel => {
     })
 
 
-
-    
-    // document.addEventListener("mousemove", animateCircles);
 
     var colors = ['#C4FAF8', '#FFABAB', '#D5AAFF']
            
@@ -76,10 +71,6 @@ handTrack.load(modelParams).then(lmodel => {
        circle.style.height = "100px";
        circle.style.borderLength = "50px";
        circle.style.opacity = 0;
-       
-
-       // setTimeout(function(){document.body.removeChild(circle)}, 1000);
-   // 
     }
     
     
