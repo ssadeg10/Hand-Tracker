@@ -87,3 +87,26 @@ handTrack.load(modelParams).then(lmodel => {
     }
 });
 
+function toggle(){
+    var x = document.getElementById("alignEl");
+    if (x.innerHTML == "Toggle Off") {
+        // x.innerHTML = "Toggle On";
+        // const modelParams = {
+        //     flipHorizontal: true,
+        //     imageScaleFactor: 0.2,
+        //     maxNumBoxes: 0,
+        //     iouThreshold: 0.5,
+        //     scoreThreshold: 0.79,
+        //   }
+  } else {
+        x.innerHTML = "Toggle Off";
+        // const modelParams = {
+        //     flipHorizontal: true,
+        //     imageScaleFactor: 0.2,
+        //     maxNumBoxes: 20,
+        //     iouThreshold: 0.5,
+        //     scoreThreshold: 0.79,
+        //   }
+  }
+}
+
